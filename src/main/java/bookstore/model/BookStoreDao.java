@@ -72,5 +72,13 @@ public class BookStoreDao {
 		return map;
 	}
 	
+	public void updateStock(Integer bnum, Integer qty) {
+		BookStore bean = new BookStore();
+		bean.setBnum(bnum);
+		bean.setStock(qty);
+		
+		sqlSessionTemplate.update(namespace + ".updateStock", bean);
+	}
+	
 	
 }

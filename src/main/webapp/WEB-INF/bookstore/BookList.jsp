@@ -11,6 +11,13 @@
 </head>
 <body>
 <div>
+	<b text-align="right"><a href="list.bsmall">장바구니</a></b>
+	<c:if test="${sessionScope.loginfo.id == null}">
+	<b>로그인 하지 않았습니다.</b> <br>
+	</c:if>
+	<c:if test="${sessionScope.loginfo.id != null}">
+	접속자 아이디 : ${sessionScope.loginfo.id} <br>
+	</c:if>
 	<form action="list.bs">
 		<select name="category">
 			<option value="title">정확도</option>

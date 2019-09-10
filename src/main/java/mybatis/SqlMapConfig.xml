@@ -12,11 +12,15 @@
  	<typeAliases>
  		<typeAlias type="bookstore.model.BookStore" alias="MyBS"/>
  		<typeAlias type="bmember.model.BmemberBean" alias="Mybmember"/>
+ 		<typeAlias type="order.model.Order" alias="MyOrder"/>
+ 		<typeAlias type="bsmall.cart.ShoppingInfo" alias="MyComposite"/>
  	</typeAliases>
  
 	<mappers>
 		<mapper resource="mybatis/bookstore.xml"></mapper>
 		<mapper resource="mybatis/bmember.xml"></mapper>
+		<mapper resource="mybatis/order.xml"></mapper>
+		<mapper resource="mybatis/composite.xml"></mapper>
 	</mappers>
 
 </configuration>

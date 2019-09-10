@@ -14,7 +14,7 @@
 		<td><img src='<c:url value="/resources/Img/${book.title}.jpg"/>'></td>
 		
 		<td>
-			<form>
+			<form action="add.bsmall" method="post">
 				<table>
 					<tr>
 						<td><h1>${book.title }</h1></td>
@@ -30,6 +30,7 @@
 					</tr>
 					<tr>
 						<td>리뷰 : </td>
+					<input type="hidden" name="bnum" value="${book.bnum}">
 					</tr>
 					<tr>
 						<td>가격 : <h3>${book.price }원</h3> </td>

@@ -73,4 +73,10 @@
 		select * from bookstore where bnum = #{bnum}
 	</select>
 	
+	<update id ="updateStock">
+		update bookstore set
+		stock = stock - #{stock}
+		where bnum = #{bnum}
+	</update>
+	
 </mapper>

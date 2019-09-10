@@ -13,14 +13,14 @@ public class BookStore {
 	private String author;
 	private String translator;
 	private String publisher;
-	@NotNull(message="필수")
+	@NotNull(message="�븘�닔")
 	private String ISBN;
 	private int page;
 	private String pub_date;
 	private int price;
 	private int stock;
 	private String introduce;
-	
+	private int quantity;
 	
 	public String getPub_date() {
 		return pub_date;
@@ -94,6 +94,13 @@ public class BookStore {
 	}
 	public void setIntroduce(String introduce) {
 		this.introduce = introduce;
+	}
+	
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 	@Override
 	public String toString() {

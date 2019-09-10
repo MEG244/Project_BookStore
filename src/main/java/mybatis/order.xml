@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="order.model.Order" >
+	<insert id="InsertData">
+		insert into bsorders(oid, mid, orderdate)
+		values(bsseqod.nextval, #{id}, sysdate )
+	</insert>
+	
+	<select id="getMaxOrderId" resultType="int">
+		select max(oid) from bsorders
+	</select>
+	
+	<select id="OrderMall" resultType="MyOrder">
+		select * from bsorders where mid=#{id}
+	</select>
+</mapper>
+
+

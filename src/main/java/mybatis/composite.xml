@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="product.model.Composite">	  
+	<select id="ShowDetail" resultType="MyComposite">
+		select b.bnum bbnum, b.title btitle, o.qty , b.price, b.price * o.qty as amount
+		from bsorders o inner join bookstore b
+		on o.bnum = bbnum and o.oid = #{pmkey}
+		order by o.oid desc
+	</select>
+</mapper>
+
+

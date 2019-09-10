@@ -1,0 +1,36 @@
+bsorders
+
+oid : �ֹ� ��ȣ
+bnum : ��ǰ��ȣ
+mid : �ֹ� ID(ȸ��)
+qty : �ֹ� ����
+price : ����
+ebook : ebook üũ
+addr : ����ּ�
+orderdate : �ֹ�����
+
+
+drop sequence bsseqod;
+create sequence bsseqod
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+
+drop table bsorders;
+
+create table bsorders(
+	oid number primary key,
+	bnum number,
+	mid varchar2(15) not null,
+	qty number,
+	price number,
+	ebook varchar2(10),
+	addr varchar2(55),
+	orderdate varchar2(25)
+);
+
+
+pnum references products(num) on delete set null,
+
